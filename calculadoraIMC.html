@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width-device-width, intial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+ <title> Cálculo de IMC </title>
+ 
+
+
+</head>
+<body>
+  <h2> Calculadora de Indice de Massa Corporal </h2>
+  <p></p>
+  <h4>Digite suas informações:</h4>
+  <p></p><p></p>
+
+  Digite seu peso:   <input type="number" name="p" id="p"> kg. <br/> <br/>
+  Digite sua altura: <input type="number" name="a" id="a"> m. <br/> <br/> 
+  <input type="button" value="Calcular!" onclick="clicar()"> <br/> <br/> 
+
+  <div id="teste"> </div> 
+  <div id="dado"></div>
+
+
+<script>  
+  function clicar() {
+   var peso = p.value
+   var altura = a.value
+   var imc = peso/(altura*altura)
+
+  window.document.querySelector('div#teste')
+    if (peso>0 && altura>0) {
+    teste.innerHTML= `Valor IMC: ${imc}`
+  }
+
+  window.document.querySelector('div#dado') 
+    if (imc<18.5){
+    dado.innerHTML='Você está abaixo do peso.' } 
+    if (imc>=18.5 && 24.9<imc){
+    dado.innerHTML='Voce está no peso normal.'}
+    if (imc>=25 && 29.9<imc){
+    dado.innerHTML='Voce está acima do peso.'}
+    if (imc>=30){
+    dado.innerHTML='Voce está obeso'}
+}
+
+
+ </script>
+</body>
+</html>
