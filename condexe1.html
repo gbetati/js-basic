@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width-device-width, intial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title> Condições Aninhadas</title>
+ 
+</head>
+
+<body> 
+
+
+   Digite sua idade: <input type="number" id="cx1" name="cx1">
+   <input type="button" value="verificar" onclick="somar()">
+
+   <p></p>
+   <div id="res" >  </div>
+
+   <script>
+       
+       function somar () {
+        var txt = window.document.querySelector('input#cx1')
+        var res = document.querySelector('div#res')
+        var idade = Number(cx1.value)
+        res.innerHTML = `Você ${idade} anos de idade`
+            if (idade <18) {
+            res.innerHTML += `, portanto voce é menor de idade.`
+            } 
+            else if (idade>18) {
+            res.innerHTML += `, portanto voce é maior de idade` 
+            }
+            if (idade>80){
+            res.innerHTML += ` e também idoso.`
+            }   
+
+
+
+        }
+       
+       
+   
+
+   </script>
+
+
+
+
+      
+</body>
+
+</html>
