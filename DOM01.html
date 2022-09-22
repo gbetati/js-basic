@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width-device-width, intial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+ <title> Primeiros passos DOM </title>
+
+
+ <style>
+    body { 
+        background-color: rgb(96, 115, 167);
+        color: chartreuse;
+        font: normal 21pt Calibri;
+    }
+ </style>
+</head>
+
+<body> 
+   <h1> Iniciando os estudos com DOM aaa</h1>  
+   <p>Introdução ao DOM em <strong>JavaScript.</strong></p>
+   <p>Boa noite, paragrafo 2</p>
+
+   <div id="msg">  Clique em mim <p></p> </div>
+
+   <script>
+
+     var p1 = window.document.getElementsByTagName('p')[0]
+     document.writeln('Aqui está seu texto: ' +p1.innerHTML)
+
+     var p2 = window.document.getElementsByTagName('p')[1]
+     p2.style.background = 'blue'
+     document.writeln('<br/><br\>Aqui está seu texto: ' +p2.innerHTML)
+
+   </script>
+
+
+</body>
+
+</html>
